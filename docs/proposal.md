@@ -18,3 +18,4 @@ Items of Interest
 Proposed Layout
 ---------------
 
+![Sample Layout](\Users\Admin\Desktop\Sample_Layout.jpg "Sample Layout")
