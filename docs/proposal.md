@@ -18,4 +18,4 @@ Items of Interest
 Proposed Layout
 ---------------
 
-![Sample Layout](\Users\Admin\Desktop\Sample_Layout.jpg "Sample Layout")
+![Sample Layout](\sqc-project-tawnashampo\docs\Sample_Layout.jpg "Sample Layout")
