@@ -18,4 +18,4 @@ Items of Interest
 Proposed Layout
 ---------------
 
-![Sample Layout](/Sample_Layout.jpg "Sample Layout")
+![Sample Layout](./Sample_Layout.jpg "Sample Layout")
