@@ -11,9 +11,8 @@ Book Source: [Finn The Wolfhound](https://www.gutenberg.org/ebooks/30550).
 Items of Interest
 -----------------
 
-*Chapters
-
-*Pages
+* Chapters
+* Pages
 
 Proposed Layout
 ---------------
