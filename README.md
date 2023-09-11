@@ -3,4 +3,4 @@ Tawna Shampo.
 
 A website that reviews the book Finn Wolfhound.
 
-My website [Render Website]([http://example.com/](https://finn-wolfhound-a-review.onrender.com).
+My website [Render Website](https://finn-wolfhound-a-review.onrender.com).
