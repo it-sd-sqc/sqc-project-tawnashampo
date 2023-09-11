@@ -1,0 +1,146 @@
+/* Shared styles for both light and dark modes */
+* {
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+body {
+    background-color: #FFF;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    width: 100vw;
+}
+
+h1 {
+    margin-top: 65px;
+}
+
+h2 {
+    margin-top: 65px;
+    margin-right: 250px;
+    color: #000;
+}
+
+html {
+    background-color: var(--background-color);
+    background-size: cover;
+    color: var(--text-color);
+    font: 16px sans-serif;
+}
+
+article {
+    flex-grow: 1;
+}
+
+nav {
+    position: absolute;
+    top: 10px;
+    right: 775px;
+    background-color: transparent;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+}
+
+nav li {
+    display: block;
+    flex: 1;
+    padding-bottom: 0.5rem;
+}
+
+nav a {
+    border: 1px solid #222;
+    border-radius: 5px;
+    display: grid;
+    place-content: center;
+    min-height: 2rem;
+    padding: 0.25rem 0;
+    text-align: center;
+    width: 5rem;
+}
+
+a:active {
+    color: #449;
+}
+
+a:hover {
+    color: #33F;
+}
+
+nav a:hover {
+    background-color: #ddd;
+}
+
+p + p {
+    margin-top: 1rem;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+#navigation-dropdown {
+    background-color: deepskyblue;
+    color: #000;
+    padding: 10px 20px;
+    text-decoration: none;
+    transform: skewX(-20deg);
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    background-color: skyblue;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+body.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+h1.dark-mode, h2.dark-mode {
+    color: #ccc;
+}
+
+body.dark-mode main {
+    background-color: #000;
+}
+
+
+
+section.dark-mode {
+    color: #ccc;
+}
