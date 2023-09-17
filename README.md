@@ -5,6 +5,7 @@ A website that reviews the book Finn Wolfhound.
 
 My website [Render Website](https://finn-wolfhound-a-review.onrender.com).
 
+```mermaid
 erDiagram
    Chapters ||--|{ Pages : contains
    Chapters {
@@ -14,3 +15,4 @@ erDiagram
    Pages {
     int pageNum
    }
+```
