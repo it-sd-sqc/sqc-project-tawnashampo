@@ -11,7 +11,6 @@ My website [Render Website](https://finn-wolfhound-a-review.onrender.com).
 title: Finn Wolfhound: A Review
 ---
 erDiagram
-  problem_types ||--o{ problems : "specifies type"
   chapters {
     id SERIAL pk
     title TEXT "Chapter title"
