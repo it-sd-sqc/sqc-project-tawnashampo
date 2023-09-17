@@ -5,12 +5,10 @@ A website that reviews the book Finn Wolfhound.
 
 My website [Render Website](https://finn-wolfhound-a-review.onrender.com).
 
-## ER Diagrams
-```mermaid
 ---
-title: Finn Wolfhound: A Review
+title: Order example
 ---
 erDiagram
-    CAR ||--o{ NAMED-DRIVER : allows
-    PERSON ||--o{ NAMED-DRIVER : is
-```
+    CUSTOMER ||--o{ ORDER : places
+    ORDER ||--|{ LINE-ITEM : contains
+    CUSTOMER }|..|{ DELIVERY-ADDRESS : uses
