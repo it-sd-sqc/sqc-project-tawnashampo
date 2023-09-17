@@ -7,7 +7,7 @@ My website [Render Website](https://finn-wolfhound-a-review.onrender.com).
 
 ```mermaid
 ---
-title: Finn Wolfhound
+title: Finn Wolfhound A Review
 ---
 erDiagram
    Chapters ||--|{ Pages : contains
