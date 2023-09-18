@@ -4,11 +4,13 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "generate": "node tools/html-to-sql.js && psql -U postgres -f ./docs/generated-schema.sql"
   },
   "dependencies": {
     "express": "^4.18.2",
     "html-validate": "^8.4.0",
+    "node-html-parser": "^6.1.10",
     "standard": "^17.1.0",
     "stylelint": "^15.10.3"
   }
