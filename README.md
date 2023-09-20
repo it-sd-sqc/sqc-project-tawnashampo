@@ -19,3 +19,5 @@ erDiagram
     int pageNum
    }
 ```
+
+Elizabeth can Handle rjection
