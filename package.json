@@ -12,6 +12,7 @@
     "html-validate": "^8.4.0",
     "node-html-parser": "^6.1.10",
     "standard": "^17.1.0",
-    "stylelint": "^15.10.3"
+    "stylelint": "^15.10.3",
+    "svgoban": "^1.0.0"
   }
 }
