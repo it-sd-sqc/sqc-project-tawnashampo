@@ -8,9 +8,11 @@
     "generate": "node tools/html-to-sql.js && psql -U postgres -f ./docs/generated-schema.sql"
   },
   "dependencies": {
+    "ejs": "^3.1.9",
     "express": "^4.18.2",
     "html-validate": "^8.4.0",
     "node-html-parser": "^6.1.10",
+    "pg": "^8.11.3",
     "standard": "^17.1.0",
     "stylelint": "^15.10.3",
     "svgoban": "^1.0.0"
