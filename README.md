@@ -1,6 +1,12 @@
 # Finn Wolfhound: A Review
 Tawna Shampo.
 
+
+
+Hello from Kohl!
+
+
+
 A website that reviews the book Finn Wolfhound.
 
 My website [Render Website](https://finn-wolfhound-a-review.onrender.com).
