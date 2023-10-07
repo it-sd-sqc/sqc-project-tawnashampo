@@ -78,12 +78,11 @@ const illustrationIds = [
 
 
 const sqlHeader = `DROP TABLE IF EXISTS chapters;
-DROP TABLE IF EXISTS pages;
+DROP TABLE IF EXISTS illustrations;
 
 CREATE TABLE chapters (
   id SERIAL PRIMARY KEY,
-  title TEXT NOT NULL,
-  
+  title TEXT NOT NULL
 );
 
 CREATE TABLE illustrations (
@@ -148,10 +147,12 @@ chapters.slice(1).forEach((data) => {
 
 writeFileSync(fd, ';\n\n');
 
-writeFileSync(fd, `('${illustrations[0].description}')`);
+writeFileSync(fd, 'INSERT INTO illustrations (description) VALUES\n');
+
+writeFileSync(fd, `('${illustrations[0].description.replace(/'/g, "''")}')`);
 
 illustrations.slice(1).forEach((data) => {
-  const value = `,\n('${data.description}')`;
+  const value = `,\n('${data.description.replace(/'/g, "''")}')`;
   writeFileSync(fd, value);
 });
 

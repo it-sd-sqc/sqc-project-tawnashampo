@@ -35,6 +35,12 @@ export const queryChapters = async function () {
   return results;
 };
 
+export const queryIllustrations = async function () {
+  const sql = 'SELECT id, description FROM illustrations;';
+  const results = await query(sql);
+  return results;
+};
+
 // Configure the web server ////////////////////////////////
 const app = express();
 
@@ -51,5 +57,11 @@ app.get('/chapters', async (req, res) => {
   res.render('pages/chapters', { chapters });
 });
 
+app.get('/illustrations', async (req, res) => {
+  const illustrations = await queryIllustrations();
+  res.render('pages/illustrations', { illustrations });
+});
+
 // Ready for browsers to connect ///////////////////////////
 app.listen(PORT, () => console.log(`Listening on ${PORT}`));
+
