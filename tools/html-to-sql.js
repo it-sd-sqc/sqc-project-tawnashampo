@@ -20,8 +20,8 @@ import { closeSync, openSync, readFileSync, writeFileSync }
 import { parse } from 'node-html-parser'
 
 // Configuration ///////////////////////////////////////////
-const srcPath = 'C:\\Users\\Admin\\Desktop\\CVTC\\SQC\\sqc-project-tawnashampo\\data\\book.html'
-const dstPath = 'C:\\Users\\Admin\\Desktop\\CVTC\\SQC\\sqc-project-tawnashampo\\docs\\generated-schema.sql'
+const srcPath = 'data/book.html'
+const dstPath = 'docs/generated-schema.sql'
 const chapterIds = [
   'CHAPTER1',
   'CHAPTER2',
