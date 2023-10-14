@@ -54,7 +54,7 @@ const chapterIds = [
   'CHAPTER29',
   'CHAPTER30',
   'CHAPTER31',
-  'CHAPTER32',
+  'CHAPTER32'
 ]
 
 const illustrationIds = [
@@ -73,9 +73,8 @@ const illustrationIds = [
   'L7923',
   'L3491',
   'L3495',
-  'L3499',
+  'L3499'
 ]
-
 
 const sqlHeader = `DROP TABLE IF EXISTS chapters;
 DROP TABLE IF EXISTS illustrations;
@@ -95,22 +94,22 @@ INSERT INTO chapters (title) VALUES
 
 // Utility functions ///////////////////////////////////////
 const extractTitle = function (root, id) {
-  const selector = `a[href="#${id}"]`;
-  const element = root.querySelector(selector);
+  const selector = `a[href="#${id}"]`
+  const element = root.querySelector(selector)
   if (element) {
-    return element.text.trim();
+    return element.text.trim()
   } else {
-    return 'no element';
+    return 'no element'
   }
 }
 
 const extractDescription = function (root, id) {
-  const selector = `a[href="#${id}"]`;
-  const element = root.querySelector(selector);
+  const selector = `a[href="#${id}"]`
+  const element = root.querySelector(selector)
   if (element) {
-    return element.text.trim();
+    return element.text.trim()
   } else {
-    return 'no element';
+    return 'no element'
   }
 }
 
@@ -118,42 +117,41 @@ const extractDescription = function (root, id) {
 const src = readFileSync(srcPath, 'utf-8')
 const domRoot = parse(src)
 
-const chapters = [];
-const illustrations = [];
+const chapters = []
+const illustrations = []
 
 chapterIds.forEach((id) => {
-  const title = extractTitle(domRoot, id);
+  const title = extractTitle(domRoot, id)
   chapters.push({
     title
-  });
-});
+  })
+})
 
 illustrationIds.forEach((id) => {
-  const description = extractDescription(domRoot, id);
+  const description = extractDescription(domRoot, id)
   illustrations.push({
     description
-  });
-});
+  })
+})
 
-const fd = openSync(dstPath, 'w');
-writeFileSync(fd, sqlHeader);
+const fd = openSync(dstPath, 'w')
+writeFileSync(fd, sqlHeader)
 
-writeFileSync(fd, `('${chapters[0].title}')`);
+writeFileSync(fd, `('${chapters[0].title}')`)
 
 chapters.slice(1).forEach((data) => {
-  const value = `,\n('${data.title}')`;
-  writeFileSync(fd, value);
-});
+  const value = `,\n('${data.title}')`
+  writeFileSync(fd, value)
+})
 
-writeFileSync(fd, ';\n\n');
+writeFileSync(fd, ';\n\n')
 
-writeFileSync(fd, 'INSERT INTO illustrations (description) VALUES\n');
+writeFileSync(fd, 'INSERT INTO illustrations (description) VALUES\n')
 
-writeFileSync(fd, `('${illustrations[0].description.replace(/'/g, "''")}')`);
+writeFileSync(fd, `('${illustrations[0].description.replace(/'/g, "''")}')`)
 
 illustrations.slice(1).forEach((data) => {
-  const value = `,\n('${data.description.replace(/'/g, "''")}')`;
-  writeFileSync(fd, value);
-});
-
-writeFileSync(fd, ';\n\n');
+  const value = `,\n('${data.description.replace(/'/g, "''")}')`
+  writeFileSync(fd, value)
+})
+writeFileSync(fd, ';\n\n')
