@@ -12,6 +12,8 @@ CREATE TABLE illustrations (
 );
 
 INSERT INTO chapters (title) VALUES
+('CHAPTER I. The Mother of
+Heroes'),
 ('CHAPTER II. In the Beginning'),
 ('CHAPTER III. The
 Foster-mother'),

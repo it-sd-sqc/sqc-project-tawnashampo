@@ -14,8 +14,7 @@
  ***********************************************************/
 
 // Dependencies ////////////////////////////////////////////
-import { strict as assert } from 'node:assert'
-import { closeSync, openSync, readFileSync, writeFileSync }
+import { openSync, readFileSync, writeFileSync }
   from 'node:fs'
 import { parse } from 'node-html-parser'
 

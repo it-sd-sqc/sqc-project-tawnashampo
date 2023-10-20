@@ -4,8 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>List of Chapters</title>
+    <link rel="stylesheet" type="text/css" href="site.css">
+    <script src="/site.js" type="module"></script>
 </head>
-<body>
+<body id="mainBody">
+<button id="darkModeToggle" type="button">🌙</button>
+<nav>
+    <ul>
+        <li class="dropdown">
+            <a id="navigation-dropdown" href="#">Navigation</a>
+            <ul class="dropdown-content">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="/chapters">Chapters</a></li>
+                <li><a href="/illustrations">Illustrations</a></li>
+            </ul>
+        </li>
+    </ul>
+</nav>
 <h1>List of Chapters</h1>
 <ul>
     <% chapters.forEach(function(chapter) { %>
