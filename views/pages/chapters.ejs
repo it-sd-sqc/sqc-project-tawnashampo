@@ -24,9 +24,22 @@
 </nav>
 <h1>List of Chapters</h1>
 <ul>
-    <% chapters.forEach(function(chapter) { %>
-        <li><%= chapter.title %></li>
+    <% chapters.forEach(function(chapter, index) { %>
+        <li><a href="#" class="chapter-link" data-chapter-number="<%= index + 1 %>"><%= chapter.title %></a></li>
     <% }); %>
 </ul>
+<div id="chapterTitle"></div>
+<script>
+  document.querySelectorAll('.chapter-link').forEach(link => {
+    link.addEventListener('click', (event) => {
+      event.preventDefault();
+      const chapterNumber = event.target.dataset.chapterNumber;
+      const chapterTitle = event.target.textContent;
+      const newWindow = window.open('', '_blank');
+      newWindow.document.write(`<h1>Chapter ${chapterNumber}</h1>`);
+      newWindow.document.write(`<p>${chapterTitle}</p>`);
+    });
+  });
+</script>
 </body>
 </html>
